@@ -1,0 +1,14 @@
+{
+  "name": "unittestrest",
+  "version": "1.0.0",
+  "description": "Unit Test Rest and Version Control Git",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}
