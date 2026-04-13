@@ -19,4 +19,7 @@ describe("Testing On The Name ", () => {
   test("Should Remove Underscores Then Truncate If Needed", () => {
     expect(nameTest("_MahmoudTarekEid")).toBe("MahmoudTar");
   });
+  test("Should Remove Leading Underscores", () => {
+    expect(nameTest("_______")).toBe("Unknown");
+  });
 });

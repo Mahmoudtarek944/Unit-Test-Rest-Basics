@@ -6,6 +6,9 @@ function testName(name) {
     while (name.startsWith("_")) {
       name = name.substring(1);
     }
+    if (name.length === 0) {
+      return "Unknown";
+    }
   } // Not use else if because if after ignore _ from the name , the length of name also greater then 10 char
   if (name.length > 10) {
     name = name.substring(0, 10);
