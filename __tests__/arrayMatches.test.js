@@ -1,4 +1,4 @@
-const { arr, obj } = require("../myArrayToMatches");
+const { arr, obj } = require("../arrayMatches");
 
 describe("Testing On Array My Matches", () => {
   test("Should Contain 10", () => {
@@ -43,5 +43,18 @@ describe("Test Object ", () => {
   });
   test("Should Have Name Property Mahmoud", () => {
     expect(obj).toHaveProperty("name", "Mahmoud");
+  });
+});
+
+describe("Test Expect Cases ", () => {
+  test("Expect Anything -- not null / not undefind", () => {
+    arr.forEach((val) => {
+      expect(val).toEqual(expect.anything());
+    });
+  });
+
+  test("Should Contain Numbers", () => {
+    let fakeArr = [10, 20];
+    expect(arr).toEqual(expect.arrayContaining(fakeArr));
   });
 });
